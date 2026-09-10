@@ -9,7 +9,7 @@
 
 
 
-_    #include <iostream>  
+__    #include <iostream>  
 #include <vector>  
   
 int main() {  
@@ -18,4 +18,4 @@ int main() {
         std::cout << elem << " ";  
     }  
     std::cout << "\n";  
-}  _
+}  __

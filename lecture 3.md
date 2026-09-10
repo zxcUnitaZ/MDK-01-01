@@ -94,8 +94,9 @@ int main() {
 ## Строки
 Контейнер std::string можно рассматривать как особый случай вектора символов std::vector<char>, имеющий набор дополнительных функций. В частности, у строки есть все те же рассмотренные нами функции, что и у вектора 
 
-```
+
 (например, pop_back или resize).
+```
   #include <iostream>
 #include <string>
 
@@ -121,7 +122,44 @@ int main() {
 }
 ```
 
+Вставку, замену и удаление подстрок можно сделать через указание индекса начала и длины подстроки:  
+```
+#include <iostream>
+#include <string>
 
+int main() {
+    std::string s = "Some string functions";
+
+    // вставка подстроки
+    s.insert(5, "std::");
+    std::cout << s << "\n";  // Some std::string functions
+
+    // замена указанного диапазона на новую подстроку
+    s.replace(0, 4, "Special");
+    std::cout << s << "\n";  // Special std::string functions
+
+    // удаление подстроки
+    s.erase(8, 5);  // Special string functions
+}
+```
+Аналогичные действия для других контейнеров (например, для того же вектора) можно сделать через итераторы.  
+```
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string phrase;
+    std::getline(std::cin, phrase);
+
+    if (phrase.starts_with("hello")) {
+        std::cout << "Greeting\n";
+    }
+
+    if (phrase.ends_with("bye")) {
+        std::cout << "Farewell\n";
+    }
+}
+```
 
 
 

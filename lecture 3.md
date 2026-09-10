@@ -9,13 +9,13 @@
 
 
 
-    _#include <iostream>  
-_#include <vector>  
+    #include <iostream>  
+#include <vector>  
   
-_int main() {  
-    _std::vector<int> data = {1, 2, 3, 4, 5};  
-    _for (int elem : data) {  
-        _std::cout << elem << " ";  
-    _}  
-    _std::cout << "\n";  
-_}  
+int main() {  
+    std::vector<int> data = {1, 2, 3, 4, 5};  
+    for (int elem : data) {  
+        std::cout << elem << " ";  
+    }  
+    std::cout << "\n";  
+}  
